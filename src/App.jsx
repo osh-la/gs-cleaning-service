@@ -24,48 +24,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const services = [
-  {
-    n: "01",
-    title: "Home & deep cleaning",
-    desc: "Come back to a home that feels lighter. From regular upkeep to a proper top-to-bottom reset.",
-    img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85",
-    tag: "FOR YOUR SPACE",
-  },
-  {
-    n: "02",
-    title: "Office & commercial",
-    desc: "Considered cleaning for workspaces, facilities and the places your team and customers share.",
-    img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85",
-    tag: "FOR YOUR BUSINESS",
-  },
-  {
-    n: "03",
-    title: "Upholstery care",
-    desc: "Give sofas, chairs and the everyday pieces you love a fresh start with careful fabric care.",
-    img: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=85",
-    tag: "FOR WHAT YOU LOVE",
-  },
-  {
-    n: "04",
-    title: "Outdoor & pool areas",
-    desc: "Restore the crisp, cared-for look of outdoor surfaces, interlocks and poolside spaces.",
-    img: "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1000&q=85",
-    tag: "FOR THE OUTSIDE",
-  },
-  {
-    n: "05",
-    title: "Fumigation & pest control",
-    desc: "Thoughtful treatment plans that help protect the comfort and usability of your space.",
-    img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85",
-    tag: "FOR PEACE OF MIND",
-  },
-  {
-    n: "06",
-    title: "Post-construction",
-    desc: "From renovation dust to move-in ready. We take care of the finishing details.",
-    img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85",
-    tag: "FOR A FRESH START",
-  },
+  { n: "01", title: "Residential cleaning", desc: "Professional home cleaning to help keep living spaces fresh, comfortable and presentable, from regular upkeep to a more thorough clean.", img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85", tag: "FOR YOUR HOME" },
+  { n: "02", title: "Commercial & office cleaning", desc: "Cleaning for offices, workspaces and commercial premises, with attention to the areas your team and visitors use every day.", img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85", tag: "FOR YOUR BUSINESS" },
+  { n: "03", title: "Swimming pool cleaning", desc: "Pool cleaning can include removing debris, vacuuming pool floors, and brushing pool walls and tiles.", img: "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1000&q=85", tag: "POOL CLEANING" },
+  { n: "04", title: "Pool maintenance", desc: "Help keep your pool clean, clear and presentable with pool-edge cleaning and water-chemistry checks where appropriate.", img: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1000&q=85", tag: "POOL MAINTENANCE" },
+  { n: "05", title: "Cleaning for other spaces", desc: "Cleaning support for other residential and commercial spaces, tailored to the areas that need attention.", img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85", tag: "TAILORED CLEANING" },
 ];
 function Header() {
   const [open, setOpen] = useState(false);
@@ -82,12 +45,12 @@ function Header() {
     <header className="fixed top-0 z-50 w-full px-4 pt-4 sm:px-7">
       <div className="mx-auto flex max-w-[1440px] items-center justify-between rounded-full border border-white/70 bg-paper/90 px-5 py-3 shadow-[0_8px_32px_rgba(24,37,31,.05)] backdrop-blur-xl sm:px-7">
         <Link to="/" className="flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-moss text-lime">
+          <span className="grid h-9 w-9 place-items-center rounded-full bg-blue-700 text-yellow-400">
             <Sparkles size={18} />
           </span>
           <span className="leading-none">
             <b className="font-[Manrope] text-[15px] font-extrabold tracking-[-.04em]">
-              PeeFee<span className="text-moss">.</span>
+              GSHOME<span className="text-blue-700">.</span>
             </b>
             <small className="mt-1 block text-[9px] font-bold uppercase tracking-[.2em] text-muted">
               Cleaning services
@@ -98,7 +61,7 @@ function Header() {
           {nav.map(([label, to]) => (
             <Link
               key={to}
-              className={`nav-link ${loc.pathname === to ? "text-moss" : ""}`}
+              className={`nav-link ${loc.pathname === to ? "text-blue-700" : ""}`}
               to={to}
             >
               {label}
@@ -107,7 +70,7 @@ function Header() {
         </nav>
         <Link
           to="/contact"
-          className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
+          className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-blue-700 md:flex"
         >
           Get a quote <ArrowUpRight size={15} />
         </Link>
@@ -124,14 +87,14 @@ function Header() {
           {nav.map(([label, to]) => (
             <Link
               key={to}
-              className={`rounded-xl px-4 py-3 ${loc.pathname === to ? "bg-[#e9eee3] text-moss font-bold" : ""}`}
+              className={`rounded-xl px-4 py-3 ${loc.pathname === to ? "bg-[#e9eee3] text-blue-700 font-bold" : ""}`}
               to={to}
             >
               {label}
             </Link>
           ))}
           <Link
-            className="rounded-xl bg-moss px-4 py-3 font-semibold text-white"
+            className="rounded-xl bg-blue-700 px-4 py-3 font-semibold text-white"
             to="/contact"
           >
             Request a quote
@@ -144,7 +107,7 @@ function Header() {
 function Eyebrow({ children, light = false }) {
   return (
     <div
-      className={`mb-5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.2em] ${light ? "text-lime" : "text-moss"}`}
+      className={`mb-5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.2em] ${light ? "text-yellow-400" : "text-blue-700"}`}
     >
       <span className="h-1.5 w-1.5 rounded-full bg-current" />
       {children}
@@ -196,14 +159,14 @@ function Home() {
         <div className="mx-auto max-w-[1440px]">
           <div className="grid gap-8 lg:grid-cols-[.88fr_1.12fr] lg:items-stretch">
             <div className="hero-copy flex flex-col items-start justify-center py-8 sm:py-14 lg:py-16">
-              <Eyebrow>A cleaner kind of care</Eyebrow>
+              <Eyebrow>Professional cleaning, done with care</Eyebrow>
               <h1 className="display max-w-[720px] text-[clamp(3.5rem,8vw,7.8rem)] font-semibold leading-[.91]">
-                A little less mess.
+                A cleaner space.
                 <br />
-                <span className="text-moss">A lot more</span>
+                <span className="text-blue-700">A better</span>
                 <br />
                 <span className="relative inline-block">
-                  breathing room.
+                  way to live.
                   <svg
                     className="absolute -bottom-3 left-1 w-[94%]"
                     viewBox="0 0 420 18"
@@ -225,10 +188,10 @@ function Home() {
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a
                   href="#contact"
-                  className="group inline-flex items-center gap-4 rounded-full bg-moss px-6 py-4 text-sm font-bold text-white transition hover:bg-ink"
+                  className="group inline-flex items-center gap-4 rounded-full bg-blue-700 px-6 py-4 text-sm font-bold text-white transition hover:bg-ink"
                 >
                   Book a clean{" "}
-                  <span className="grid h-7 w-7 place-items-center rounded-full bg-lime text-ink transition group-hover:rotate-45">
+                  <span className="grid h-7 w-7 place-items-center rounded-full bg-yellow-400 text-ink transition group-hover:rotate-45">
                     <ArrowUpRight size={16} />
                   </span>
                 </a>
@@ -257,7 +220,7 @@ function Home() {
                 <div>
                   <div className="flex gap-1 text-[#7d9b3c]">★★★★★</div>
                   <p className="text-xs text-muted">
-                    Trusted cleaning, personal care
+                    Residential, commercial & pool care
                   </p>
                 </div>
               </div>
@@ -274,11 +237,11 @@ function Home() {
               </div>
               <div className="float-note absolute bottom-5 left-5 right-5 rounded-[1.5rem] border border-white/40 bg-paper/90 p-5 backdrop-blur-xl sm:bottom-7 sm:left-7 sm:right-auto sm:max-w-[330px] sm:p-6">
                 <div className="mb-4 flex items-center justify-between">
-                  <span className="grid h-10 w-10 place-items-center rounded-full bg-lime">
+                  <span className="grid h-10 w-10 place-items-center rounded-full bg-yellow-400">
                     <Sparkles size={19} />
                   </span>
                   <span className="text-[10px] font-bold uppercase tracking-[.18em] text-muted">
-                    The PeeFee promise
+                    The GSHOME promise
                   </span>
                 </div>
                 <p className="display text-2xl font-semibold leading-tight">
@@ -292,7 +255,7 @@ function Home() {
               </div>
               <div className="absolute bottom-8 right-7 hidden text-right text-white sm:block">
                 <p className="display text-5xl font-semibold">
-                  01<span className="text-lime">.</span>
+                  01<span className="text-yellow-400">.</span>
                 </p>
                 <p className="mt-1 text-[10px] uppercase tracking-[.2em]">
                   Clean space, clear mind
@@ -313,10 +276,10 @@ function Home() {
               <p className="text-xs text-muted">We take on</p>
               <p className="mt-1 font-bold">Everyday mess to deep clean</p>
             </div>
-            <div className="flex items-center justify-between rounded-2xl bg-lime px-5 py-5">
+            <div className="flex items-center justify-between rounded-2xl bg-yellow-400 px-5 py-5">
               <div>
-                <p className="text-xs text-ink/70">Based in</p>
-                <p className="mt-1 font-bold">Port Harcourt</p>
+                <p className="text-xs text-ink/70">Serving</p>
+                <p className="mt-1 font-bold">Abuja, Nigeria</p>
               </div>
               <MapPin size={19} />
             </div>
@@ -330,7 +293,7 @@ function Home() {
               <Eyebrow>What we take care of</Eyebrow>
               <h2 className="display max-w-3xl text-5xl font-semibold leading-[1.02] sm:text-7xl">
                 Every space has
-                <br />a <span className="text-moss">fresh-start</span> button.
+                <br />a <span className="text-blue-700">fresh-start</span> button.
               </h2>
             </div>
             <p className="max-w-sm pb-1 text-sm leading-7 text-muted">
@@ -354,13 +317,13 @@ function Home() {
                   <span className="absolute left-4 top-4 rounded-full bg-paper/90 px-3 py-2 text-[9px] font-bold tracking-[.14em]">
                     {s.tag}
                   </span>
-                  <span className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-lime text-ink transition group-hover:rotate-45">
+                  <span className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-yellow-400 text-ink transition group-hover:rotate-45">
                     <ArrowUpRight size={18} />
                   </span>
                 </div>
                 <div className="p-6 sm:p-7">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-moss">{s.n}</span>
+                    <span className="text-xs font-bold text-blue-700">{s.n}</span>
                     <span className="h-px w-12 bg-black/10" />
                   </div>
                   <h3 className="display mt-4 text-2xl font-semibold">
@@ -400,7 +363,7 @@ function Home() {
               <p className="display text-3xl font-semibold sm:text-4xl">
                 Care you can see.
                 <br />
-                <span className="text-lime">Comfort you can feel.</span>
+                <span className="text-yellow-400">Comfort you can feel.</span>
               </p>
             </div>
           </div>
@@ -411,7 +374,7 @@ function Home() {
               <br />
               changes the
               <br />
-              <span className="text-lime">whole feeling.</span>
+              <span className="text-yellow-400">whole feeling.</span>
             </h2>
             <p className="mt-7 max-w-lg text-base leading-8 text-white/65">
               We believe the best cleaning is the kind you notice without having
@@ -440,7 +403,7 @@ function Home() {
                   key={x.title}
                   className="flex gap-4 border-t border-white/15 py-5"
                 >
-                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white/10 text-lime">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white/10 text-yellow-400">
                     <x.icon size={20} />
                   </span>
                   <div>
@@ -454,7 +417,7 @@ function Home() {
             </div>
             <a
               href="#contact"
-              className="mt-7 inline-flex items-center gap-3 rounded-full bg-lime px-6 py-4 text-sm font-bold text-ink transition hover:bg-white"
+              className="mt-7 inline-flex items-center gap-3 rounded-full bg-yellow-400 px-6 py-4 text-sm font-bold text-ink transition hover:bg-white"
             >
               Let’s plan your clean <ArrowUpRight size={16} />
             </a>
@@ -469,7 +432,7 @@ function Home() {
               <h2 className="display text-5xl font-semibold sm:text-7xl">
                 The difference is
                 <br />
-                <span className="text-moss">in the details.</span>
+                <span className="text-blue-700">in the details.</span>
               </h2>
             </div>
             <p className="max-w-sm text-sm leading-7 text-muted">
@@ -487,7 +450,7 @@ function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/55 to-transparent" />
               <div className="absolute bottom-6 left-6 text-white">
-                <p className="text-[10px] font-bold uppercase tracking-[.2em] text-lime">
+                <p className="text-[10px] font-bold uppercase tracking-[.2em] text-yellow-400">
                   A little more room to breathe
                 </p>
                 <h3 className="display mt-2 text-3xl font-semibold sm:text-4xl">
@@ -504,7 +467,7 @@ function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent" />
               <div className="absolute bottom-6 left-6 text-white">
-                <p className="text-[10px] font-bold uppercase tracking-[.2em] text-lime">
+                <p className="text-[10px] font-bold uppercase tracking-[.2em] text-yellow-400">
                   Ready for what’s next
                 </p>
                 <h3 className="display mt-2 text-3xl font-semibold">
@@ -515,7 +478,7 @@ function Home() {
           </div>
           <div className="reveal mt-5 flex flex-col justify-between gap-4 rounded-[1.5rem] bg-[#e9eee3] p-6 sm:flex-row sm:items-center sm:p-8">
             <div className="flex items-center gap-4">
-              <span className="grid h-12 w-12 place-items-center rounded-full bg-lime">
+              <span className="grid h-12 w-12 place-items-center rounded-full bg-yellow-400">
                 <Check size={22} />
               </span>
               <div>
@@ -535,7 +498,7 @@ function Home() {
         </div>
       </section>
       <section className="px-4 pb-20 sm:px-7 sm:pb-28">
-        <div className="mx-auto max-w-[1440px] overflow-hidden rounded-[2rem] bg-lime px-6 py-12 sm:px-12 sm:py-16">
+        <div className="mx-auto max-w-[1440px] overflow-hidden rounded-[2rem] bg-yellow-400 px-6 py-12 sm:px-12 sm:py-16">
           <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
             <div className="reveal">
               <Eyebrow>Make space for better</Eyebrow>
@@ -551,10 +514,10 @@ function Home() {
             </div>
             <a
               href="#contact"
-              className="inline-flex items-center justify-between gap-8 rounded-full bg-ink px-6 py-4 text-sm font-bold text-white transition hover:bg-moss"
+              className="inline-flex items-center justify-between gap-8 rounded-full bg-ink px-6 py-4 text-sm font-bold text-white transition hover:bg-blue-700"
             >
               Let’s get started{" "}
-              <span className="grid h-8 w-8 place-items-center rounded-full bg-lime text-ink">
+              <span className="grid h-8 w-8 place-items-center rounded-full bg-yellow-400 text-ink">
                 <ArrowUpRight size={17} />
               </span>
             </a>
@@ -570,7 +533,7 @@ function Home() {
               <br />
               your space
               <br />
-              <span className="text-moss">feel good.</span>
+              <span className="text-blue-700">feel good.</span>
             </h2>
             <p className="mt-5 max-w-sm text-sm leading-7 text-muted">
               Have a question or need a quote? Send us a few details and our
@@ -578,28 +541,34 @@ function Home() {
             </p>
             <div className="mt-8 space-y-4">
               <a
-                href="tel:08149096120"
+                href="tel:08102845967"
                 className="flex items-center gap-3 text-sm font-semibold"
               >
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-moss">
+                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-blue-700">
                   <Phone size={17} />
                 </span>
-                0814 909 6120
+                08102845967
               </a>
               <a
-                href="mailto:hello@peefeecleaning.com"
+                href="https://wa.me/2348102845967"
                 className="flex items-center gap-3 text-sm font-semibold"
               >
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-moss">
+                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-blue-700">
                   <Mail size={17} />
                 </span>
-                Send us an email
+                Message us on WhatsApp
               </a>
               <div className="flex items-center gap-3 text-sm font-semibold">
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-moss">
+                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-blue-700">
                   <MapPin size={17} />
                 </span>
-                Port Harcourt, Rivers State
+                Abuja, Nigeria
+              </div>
+              <div className="flex items-center gap-3 text-sm font-semibold">
+                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-blue-700">
+                  <Clock3 size={17} />
+                </span>
+                Monday–Saturday · Sunday by arrangement
               </div>
             </div>
           </div>
@@ -626,7 +595,7 @@ function PageHero({
             <h1 className="display max-w-3xl text-[clamp(3.3rem,7vw,6.8rem)] font-semibold leading-[.94]">
               {title}
               <br />
-              <span className="text-moss">{accent}</span>
+              <span className="text-blue-700">{accent}</span>
             </h1>
             <p className="mt-7 max-w-xl text-base leading-8 text-muted sm:text-lg">
               {description}
@@ -634,7 +603,7 @@ function PageHero({
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-3 rounded-full bg-moss px-6 py-4 text-sm font-bold text-white hover:bg-ink"
+                className="inline-flex items-center gap-3 rounded-full bg-blue-700 px-6 py-4 text-sm font-bold text-white hover:bg-ink"
               >
                 Let’s talk <ArrowUpRight size={16} />
               </Link>
@@ -649,16 +618,16 @@ function PageHero({
           <div className="relative min-h-[360px] overflow-hidden rounded-[2rem] sm:min-h-[500px]">
             <img
               src={image}
-              alt="PeeFee cleaning services"
+              alt="G.S Home Cleaning Services"
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent" />
             <span className="absolute left-6 top-6 rounded-full border border-white/40 bg-white/20 px-4 py-2 text-[10px] font-bold uppercase tracking-[.18em] text-white backdrop-blur">
-              PeeFee cleaning services
+              G.S Home Cleaning Services
             </span>
             <span className="display absolute bottom-5 right-6 text-5xl font-semibold text-white">
               {number}
-              <span className="text-lime">.</span>
+              <span className="text-yellow-400">.</span>
             </span>
           </div>
         </div>
@@ -680,14 +649,14 @@ function ServiceCard({ service }) {
           className="h-full w-full object-cover"
         />
         <span className="absolute left-4 top-4 rounded-full bg-paper/90 px-3 py-2 text-[9px] font-bold uppercase tracking-[.16em]">
-          {service.n} / 06
+          {service.n} / 05
         </span>
-        <span className="absolute bottom-4 right-4 grid h-11 w-11 place-items-center rounded-full bg-lime text-ink transition group-hover:rotate-45">
+        <span className="absolute bottom-4 right-4 grid h-11 w-11 place-items-center rounded-full bg-yellow-400 text-ink transition group-hover:rotate-45">
           <ArrowUpRight size={19} />
         </span>
       </div>
       <div className="p-6 sm:p-7">
-        <p className="text-[10px] font-bold uppercase tracking-[.18em] text-moss">
+        <p className="text-[10px] font-bold uppercase tracking-[.18em] text-blue-700">
           {service.tag}
         </p>
         <h3 className="display mt-3 text-2xl font-semibold sm:text-3xl">
@@ -708,7 +677,7 @@ function ServicesPage() {
         eyebrow="A service for every space"
         title="The right clean for"
         accent="your kind of space."
-        description="From everyday home care to specialist cleaning, explore considered services designed around the way you live and work."
+        description="Explore residential, commercial and swimming pool cleaning services from G.S Home Cleaning Services in Abuja."
         image="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1500&q=85"
         number="02"
       />
@@ -718,7 +687,7 @@ function ServicesPage() {
             <div>
               <Eyebrow>Our services</Eyebrow>
               <h2 className="display text-4xl font-semibold sm:text-6xl">
-                Care, from floor to ceiling.
+                Home, office and pool care.
               </h2>
             </div>
             <p className="max-w-sm text-sm leading-7 text-muted">
@@ -768,7 +737,7 @@ function ServiceDetail() {
             <h2 className="display text-4xl font-semibold sm:text-5xl">
               A clear plan.
               <br />
-              <span className="text-moss">A careful finish.</span>
+              <span className="text-blue-700">A careful finish.</span>
             </h2>
             <p className="mt-5 text-sm leading-7 text-muted">
               Every space is different. We start by understanding what you need,
@@ -800,7 +769,7 @@ function ServiceDetail() {
               ],
             ].map(([n, t, d]) => (
               <div key={n} className="rounded-2xl bg-white p-6">
-                <span className="text-xs font-bold text-moss">{n}</span>
+                <span className="text-xs font-bold text-blue-700">{n}</span>
                 <h3 className="display mt-4 text-xl font-semibold">{t}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted">{d}</p>
               </div>
@@ -816,10 +785,10 @@ function AboutPage() {
   return (
     <main>
       <PageHero
-        eyebrow="A cleaner kind of care"
+        eyebrow="Professional cleaning, done with care"
         title="We believe clean"
         accent="changes how life feels."
-        description="PeeFee Cleaning Services helps homes, workplaces and shared spaces feel fresher, calmer and ready for what matters next. We bring thoughtful service and attention to the small things."
+        description="G.S Home Cleaning Services helps homes, workplaces and shared spaces feel fresher, calmer and ready for what matters next. We bring thoughtful service and attention to the small things."
         image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1500&q=85"
         number="03"
       />
@@ -828,7 +797,7 @@ function AboutPage() {
           <div>
             <Eyebrow>Our point of view</Eyebrow>
             <h2 className="display text-4xl font-semibold sm:text-6xl">
-              Cleaning is more than a checklist.
+              Clean spaces make a difference.
             </h2>
           </div>
           <div className="space-y-5 text-sm leading-8 text-muted">
@@ -845,7 +814,7 @@ function AboutPage() {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 rounded-full bg-moss px-6 py-4 font-bold text-white"
+              className="inline-flex items-center gap-3 rounded-full bg-blue-700 px-6 py-4 font-bold text-white"
             >
               Meet your cleaning partner <ArrowUpRight size={16} />
             </Link>
@@ -864,7 +833,7 @@ function AboutPage() {
             ],
           ].map(([t, d]) => (
             <div key={t} className="rounded-[1.5rem] bg-white p-7">
-              <span className="grid h-11 w-11 place-items-center rounded-full bg-lime">
+              <span className="grid h-11 w-11 place-items-center rounded-full bg-yellow-400">
                 <Check size={20} />
               </span>
               <h3 className="display mt-5 text-2xl font-semibold">{t}</h3>
@@ -891,7 +860,7 @@ function WorkPage() {
     ],
     [
       "The finishing touch.",
-      "Upholstery and interiors",
+      "Swimming pool cleaning and maintenance",
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=85",
     ],
     [
@@ -901,7 +870,7 @@ function WorkPage() {
     ],
     [
       "Ready for what’s next.",
-      "Post-construction cleaning",
+      "Residential cleaning cleaning",
       "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85",
     ],
   ];
@@ -923,7 +892,7 @@ function WorkPage() {
               Fresh spaces. Better feelings.
             </h2>
             <p className="mt-4 max-w-xl text-sm leading-7 text-muted">
-              A visual look at the environments and service types we care for.
+              A visual overview of residential, commercial and swimming pool cleaning services. Replace illustrative images with real GSHOME project photos as they become available.
               Images are illustrative; replace with your own project photography
               when available.
             </p>
@@ -942,7 +911,7 @@ function WorkPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/5 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <p className="text-[10px] font-bold uppercase tracking-[.2em] text-lime">
+                  <p className="text-[10px] font-bold uppercase tracking-[.2em] text-yellow-400">
                     {tag}
                   </p>
                   <h3 className="display mt-2 text-3xl font-semibold sm:text-4xl">
@@ -965,7 +934,7 @@ function ContactPage() {
         eyebrow="Let’s make space for better"
         title="Tell us what"
         accent="needs a fresh start."
-        description="Share a little about your home, office or outdoor space. We’ll help you find the right service and prepare a quote."
+        description="Share a few details about your home, office or swimming pool and request a cleaning quote."
         image="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1500&q=85"
         number="05"
       />
@@ -981,28 +950,34 @@ function ContactPage() {
             </p>
             <div className="mt-8 space-y-4">
               <a
-                href="tel:08149096120"
+                href="tel:08102845967"
                 className="flex items-center gap-3 text-sm font-semibold"
               >
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-moss">
+                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-blue-700">
                   <Phone size={17} />
                 </span>
-                0814 909 6120
+                08102845967
               </a>
               <a
-                href="mailto:hello@peefeecleaning.com"
+                href="https://wa.me/2348102845967"
                 className="flex items-center gap-3 text-sm font-semibold"
               >
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-moss">
+                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-blue-700">
                   <Mail size={17} />
                 </span>
-                hello@peefeecleaning.com
+                WhatsApp us
               </a>
               <div className="flex items-center gap-3 text-sm font-semibold">
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-moss">
+                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-blue-700">
                   <MapPin size={17} />
                 </span>
-                Port Harcourt, Rivers State
+                Abuja, Nigeria
+              </div>
+              <div className="flex items-center gap-3 text-sm font-semibold">
+                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-blue-700">
+                  <Clock3 size={17} />
+                </span>
+                Monday–Saturday · Sunday by arrangement
               </div>
             </div>
           </div>
@@ -1015,7 +990,7 @@ function ContactPage() {
 function Callout() {
   return (
     <section className="px-4 py-10 sm:px-7 sm:py-16">
-      <div className="mx-auto max-w-[1440px] overflow-hidden rounded-[2rem] bg-lime px-6 py-10 sm:px-12 sm:py-14">
+      <div className="mx-auto max-w-[1440px] overflow-hidden rounded-[2rem] bg-yellow-400 px-6 py-10 sm:px-12 sm:py-14">
         <div className="grid gap-7 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <Eyebrow>Make space for better</Eyebrow>
@@ -1032,7 +1007,7 @@ function Callout() {
             className="inline-flex items-center justify-between gap-8 rounded-full bg-ink px-6 py-4 text-sm font-bold text-white"
           >
             Request a quote{" "}
-            <span className="grid h-8 w-8 place-items-center rounded-full bg-lime text-ink">
+            <span className="grid h-8 w-8 place-items-center rounded-full bg-yellow-400 text-ink">
               <ArrowUpRight size={17} />
             </span>
           </Link>
@@ -1046,16 +1021,16 @@ function ContactForm() {
   const [form, setForm] = useState({
     name: "",
     phone: "",
-    service: "Home & deep cleaning",
+    service: "Residential cleaning",
     details: "",
   });
   const [sent, setSent] = useState(false);
   const change = (e) => setForm({ ...form, [e.target.name]: e.target.value });
   const submit = (e) => {
     e.preventDefault();
-    const msg = `Hello PeeFee Cleaning Services, I'd like to request a quote.\nName: ${form.name}\nPhone: ${form.phone}\nService: ${form.service}\nDetails: ${form.details || "Not specified"}`;
+    const msg = `Hello G.S Home Cleaning Services, I'd like to request a quote.\nName: ${form.name}\nPhone: ${form.phone}\nService: ${form.service}\nDetails: ${form.details || "Not specified"}`;
     window.open(
-      `https://wa.me/2348149096120?text=${encodeURIComponent(msg)}`,
+      `https://wa.me/2348102845967?text=${encodeURIComponent(msg)}`,
       "_blank",
       "noopener,noreferrer",
     );
@@ -1073,7 +1048,7 @@ function ContactForm() {
           </h3>
           <p className="mt-1 text-xs text-muted">We’ll take it from here.</p>
         </div>
-        <span className="grid h-11 w-11 place-items-center rounded-full bg-lime">
+        <span className="grid h-11 w-11 place-items-center rounded-full bg-yellow-400">
           <ArrowDownRight size={20} />
         </span>
       </div>
@@ -1086,7 +1061,7 @@ function ContactForm() {
             value={form.name}
             onChange={change}
             placeholder="e.g. Amaka"
-            className="mt-2 w-full rounded-xl border border-black/10 bg-white px-4 py-3.5 text-sm font-normal outline-none transition focus:border-moss"
+            className="mt-2 w-full rounded-xl border border-black/10 bg-white px-4 py-3.5 text-sm font-normal outline-none transition focus:border-blue-700"
           />
         </label>
         <label className="text-xs font-bold">
@@ -1097,7 +1072,7 @@ function ContactForm() {
             value={form.phone}
             onChange={change}
             placeholder="080…"
-            className="mt-2 w-full rounded-xl border border-black/10 bg-white px-4 py-3.5 text-sm font-normal outline-none transition focus:border-moss"
+            className="mt-2 w-full rounded-xl border border-black/10 bg-white px-4 py-3.5 text-sm font-normal outline-none transition focus:border-blue-700"
           />
         </label>
         <label className="text-xs font-bold sm:col-span-2">
@@ -1106,7 +1081,7 @@ function ContactForm() {
             name="service"
             value={form.service}
             onChange={change}
-            className="mt-2 w-full rounded-xl border border-black/10 bg-white px-4 py-3.5 text-sm font-normal outline-none focus:border-moss"
+            className="mt-2 w-full rounded-xl border border-black/10 bg-white px-4 py-3.5 text-sm font-normal outline-none focus:border-blue-700"
           >
             {services.map((s) => (
               <option key={s.n}>{s.title}</option>
@@ -1122,18 +1097,18 @@ function ContactForm() {
             onChange={change}
             rows="3"
             placeholder="Type of space, location, preferred day…"
-            className="mt-2 w-full resize-y rounded-xl border border-black/10 bg-white px-4 py-3.5 text-sm font-normal outline-none focus:border-moss"
+            className="mt-2 w-full resize-y rounded-xl border border-black/10 bg-white px-4 py-3.5 text-sm font-normal outline-none focus:border-blue-700"
           />
         </label>
       </div>
       <button
         type="submit"
-        className="mt-5 flex w-full items-center justify-between rounded-full bg-moss px-6 py-4 text-sm font-bold text-white transition hover:bg-ink"
+        className="mt-5 flex w-full items-center justify-between rounded-full bg-blue-700 px-6 py-4 text-sm font-bold text-white transition hover:bg-ink"
       >
         Request a quote on WhatsApp <ArrowUpRight size={17} />
       </button>
       {sent && (
-        <p className="mt-3 text-xs text-moss">
+        <p className="mt-3 text-xs text-blue-700">
           WhatsApp should open with your message ready to send.
         </p>
       )}
@@ -1150,12 +1125,12 @@ function Footer() {
       <div className="mx-auto max-w-[1440px] rounded-[2rem] bg-ink px-6 py-8 text-white sm:px-10 sm:py-10">
         <div className="flex flex-col justify-between gap-8 border-b border-white/15 pb-8 md:flex-row md:items-center">
           <Link to="/" className="flex items-center gap-3">
-            <span className="grid h-11 w-11 place-items-center rounded-full bg-lime text-ink">
+            <span className="grid h-11 w-11 place-items-center rounded-full bg-yellow-400 text-ink">
               <Sparkles size={20} />
             </span>
             <span>
               <b className="font-[Manrope] text-lg font-extrabold tracking-[-.04em]">
-                PeeFee.
+                GSHOME.
               </b>
               <small className="block text-[9px] uppercase tracking-[.2em] text-white/55">
                 Cleaning services
@@ -1164,7 +1139,7 @@ function Footer() {
           </Link>
           <p className="display max-w-xl text-2xl font-medium leading-snug sm:text-3xl">
             A cleaner space makes room for{" "}
-            <span className="text-lime">better things.</span>
+            <span className="text-yellow-400">better things.</span>
           </p>
           <Link
             to="/contact"
@@ -1175,7 +1150,7 @@ function Footer() {
         </div>
         <div className="flex flex-col justify-between gap-5 pt-6 text-xs text-white/50 sm:flex-row sm:items-center">
           <p>
-            © {new Date().getFullYear()} PeeFee Cleaning Services. Made with
+            © {new Date().getFullYear()} G.S Home Cleaning Services. Made with
             care.
           </p>
           <div className="flex flex-wrap gap-5">
@@ -1191,7 +1166,7 @@ function Footer() {
             <Link to="/contact" className="hover:text-white">
               Contact
             </Link>
-            <a href="tel:08149096120" className="hover:text-white">
+            <a href="tel:08102845967" className="hover:text-white">
               Call us
             </a>
           </div>
@@ -1223,7 +1198,7 @@ function NotFound() {
         <Eyebrow>Oops, wrong turn</Eyebrow>
         <h1 className="display text-6xl font-semibold">Let’s get you back.</h1>
         <Link
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-moss px-6 py-4 text-sm font-bold text-white"
+          className="mt-6 inline-flex items-center gap-2 rounded-full bg-blue-700 px-6 py-4 text-sm font-bold text-white"
           to="/"
         >
           Back to home <ArrowRight size={16} />
