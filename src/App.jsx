@@ -1356,8 +1356,15 @@ function Footer() {
         </div>
         <div className="flex flex-col justify-between gap-5 pt-6 text-xs text-white/50 sm:flex-row sm:items-center">
           <p>
-            © {new Date().getFullYear()} G.S Home Cleaning Services. Made with
-            care.
+            © {new Date().getFullYear()}{" "}
+            <a
+              href="https://wa.me/2348140393937"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:opacity-70"
+            >
+              Osh_la
+            </a>
           </p>
           <div className="flex flex-wrap gap-5">
             <Link to="/services" className="hover:text-white">
