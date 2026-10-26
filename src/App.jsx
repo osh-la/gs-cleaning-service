@@ -133,16 +133,12 @@ function Header() {
             </Link>
           ))}
         </nav>
-
-        <a
-          href="https://wa.me/2348102845967?text=Hello%20GSHOME%20Cleaning%20Service%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20cleaning%20services."
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/contact"
           className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
         >
           Request a Quote <ArrowUpRight size={15} />
-        </a>
-
+        </Link>
         <button
           onClick={() => setOpen(!open)}
           className="grid h-10 w-10 place-items-center rounded-full bg-white lg:hidden"
@@ -162,15 +158,12 @@ function Header() {
               {label}
             </Link>
           ))}
-
-          <a
+          <Link
             className="rounded-xl bg-moss px-4 py-3 font-semibold text-white"
-            href="https://wa.me/2348102845967?text=Hello%20GSHOME%20Cleaning%20Service%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20cleaning%20services."
-            target="_blank"
-            rel="noopener noreferrer"
+            to="/contact"
           >
             Request a Quote
-          </a>
+          </Link>
         </nav>
       )}
     </header>
@@ -204,15 +197,17 @@ function Home() {
         ease: "power3.out",
         delay: 0.1,
       });
-      gsap.utils.toArray(".reveal").forEach((el) =>
-        gsap.to(el, {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: { trigger: el, start: "top 88%", once: true },
-        }),
-      );
+      gsap.utils
+        .toArray(".reveal")
+        .forEach((el) =>
+          gsap.to(el, {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: { trigger: el, start: "top 88%", once: true },
+          }),
+        );
       gsap.to(".float-note", {
         y: -10,
         duration: 2.2,
@@ -257,9 +252,7 @@ function Home() {
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a
-                  href="https://wa.me/2348102845967?text=Hello%20GSHOME%20Cleaning%20Service%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20cleaning%20services."
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#contact"
                   className="group inline-flex items-center gap-4 rounded-full bg-moss px-6 py-4 text-sm font-bold text-white transition hover:bg-ink"
                 >
                   Request a Quote{" "}
@@ -267,7 +260,6 @@ function Home() {
                     <ArrowUpRight size={16} />
                   </span>
                 </a>
-
                 <a
                   href="#services"
                   className="inline-flex items-center gap-2 px-4 py-4 text-sm font-bold"
@@ -557,16 +549,12 @@ function Home() {
               <div>
                 <p className="font-bold">Your space. Your standards.</p>
                 <p className="mt-1 text-sm text-muted">
-                  Tell us your service needs, property type and location to
-                  begin.
+                  Tell us your service needs, property type and location to begin.
                 </p>
               </div>
             </div>
-
             <a
-              href="https://wa.me/2348102845967?text=Hello%20GSHOME%20Cleaning%20Service%2C%20I%20would%20like%20to%20request%20a%20cleaning%20quote."
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               className="inline-flex items-center gap-3 self-start rounded-full bg-ink px-6 py-4 text-sm font-bold text-white sm:self-auto"
             >
               Request a Cleaning Quote <ArrowUpRight size={16} />
@@ -579,119 +567,97 @@ function Home() {
           <div className="reveal flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
               <Eyebrow>Cleaning services in Abuja</Eyebrow>
-              <h2 className="display text-4xl font-semibold sm:text-6xl">
-                Local care, wherever you are.
-              </h2>
+              <h2 className="display text-4xl font-semibold sm:text-6xl">Local care, wherever you are.</h2>
             </div>
-            <p className="max-w-md text-sm leading-7 text-muted">
-              Based in Lokogoma, GSHOME serves homes, offices and other
-              properties across Abuja. Inter-state requests may be arranged
-              subject to availability and travel requirements.
-            </p>
+            <p className="max-w-md text-sm leading-7 text-muted">Based in Lokogoma, GSHOME serves homes, offices and other properties across Abuja. Inter-state requests may be arranged subject to availability and travel requirements.</p>
           </div>
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-            {[
-              "Lokogoma & Northstar Garden Estate",
-              "Dakwo",
-              "Wuse 2",
-              "Maitama",
-              "Katampe",
-              "Gwarinpa",
-              "Idu",
-              "Garki",
-              "Lifecamp",
-              "Jabi",
-            ].map((area) => (
-              <div
-                key={area}
-                className="rounded-2xl bg-white px-5 py-4 text-sm font-semibold"
-              >
-                {area}
-              </div>
+            {["Lokogoma & Northstar Garden Estate", "Dakwo", "Wuse 2", "Maitama", "Katampe", "Gwarinpa", "Idu", "Garki", "Lifecamp", "Jabi"].map((area) => (
+              <div key={area} className="rounded-2xl bg-white px-5 py-4 text-sm font-semibold">{area}</div>
             ))}
           </div>
-          <p className="mt-5 text-sm leading-7 text-muted">
-            Outside Abuja? Ask about service availability in Benin City and
-            Owerri. Travel and scheduling are confirmed before a booking is
-            accepted.
-          </p>
+          <p className="mt-5 text-sm leading-7 text-muted">Outside Abuja? Ask about service availability in Benin City and Owerri. Travel and scheduling are confirmed before a booking is accepted.</p>
         </div>
       </section>
-      <section
-        id="booking-process"
-        className="bg-ink px-4 py-16 text-paper sm:px-7 sm:py-24"
-      >
+      <section id="booking-process" className="bg-ink px-4 py-16 text-paper sm:px-7 sm:py-24">
         <div className="mx-auto max-w-[1440px]">
           <Eyebrow light>How booking works</Eyebrow>
-          <h2 className="display max-w-3xl text-4xl font-semibold sm:text-6xl">
-            From first enquiry to final checks.
-          </h2>
+          <h2 className="display max-w-3xl text-4xl font-semibold sm:text-6xl">From first enquiry to final checks.</h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {[
-              [
-                "01",
-                "Make an enquiry",
-                "Call or WhatsApp us and describe your property, location and required cleaning service.",
-              ],
-              [
-                "02",
-                "Property assessment",
-                "We may arrange an inspection or an initial video assessment. A ₦10,000 inspection fee may apply where confirmed in advance.",
-              ],
-              [
-                "03",
-                "Receive a quotation",
-                "Your quote is based on the property, its condition, the requested service and the agreed scope.",
-              ],
-              [
-                "04",
-                "Confirm your booking",
-                "The stated arrangement is a 30% deposit, with the balance payable on completion. Confirm these terms with GSHOME before paying.",
-              ],
-              [
-                "05",
-                "Cleaning & quality checks",
-                "Our team completes the agreed work and checks the relevant areas against the service scope.",
-              ],
+              ["01", "Make an enquiry", "Call or WhatsApp us and describe your property, location and required cleaning service."],
+              ["02", "Property assessment", "We may arrange an inspection or an initial video assessment. A ₦10,000 inspection fee may apply where confirmed in advance."],
+              ["03", "Receive a quotation", "Your quote is based on the property, its condition, the requested service and the agreed scope."],
+              ["04", "Confirm your booking", "The stated arrangement is a 30% deposit, with the balance payable on completion. Confirm these terms with GSHOME before paying."],
+              ["05", "Cleaning & quality checks", "Our team completes the agreed work and checks the relevant areas against the service scope."],
             ].map(([n, title, desc]) => (
-              <article
-                key={n}
-                className="rounded-2xl border border-white/15 bg-white/5 p-5"
-              >
+              <article key={n} className="rounded-2xl border border-white/15 bg-white/5 p-5">
                 <span className="text-sm font-bold text-lime">{n}</span>
                 <h3 className="display mt-4 text-xl font-semibold">{title}</h3>
                 <p className="mt-3 text-sm leading-6 text-white/65">{desc}</p>
               </article>
             ))}
           </div>
-          <p className="mt-6 max-w-4xl text-xs leading-6 text-white/55">
-            Booking policy note: the inspection fee and 30% deposit/balance
-            arrangement are shown as the currently stated terms and should be
-            confirmed by the business before publication as final policies. The
-            final quotation and agreed scope should be clear before work starts.
-          </p>
+          <p className="mt-6 max-w-4xl text-xs leading-6 text-white/55">Booking policy note: the inspection fee and 30% deposit/balance arrangement are shown as the currently stated terms and should be confirmed by GSHOME before publication as final policies. The final quotation and agreed scope should be clear before work starts.</p>
         </div>
       </section>
       <section id="testimonials" className="px-4 py-16 sm:px-7 sm:py-24">
         <div className="mx-auto max-w-[1440px]">
-          <Eyebrow>Reviews & testimonials</Eyebrow>
-          <h2 className="display max-w-3xl text-4xl font-semibold sm:text-6xl">
-            Trust is earned, one clean at a time.
-          </h2>
-          <p className="mt-5 max-w-2xl text-sm leading-7 text-muted">
-            Customer feedback belongs here. Add genuine reviews from GSHOME
-            clients, with permission to publish their names or business details.
-            We won’t invent testimonials or claim reviews are verified without
-            confirmation.
-          </p>
-          <a
-            href="https://wa.me/2348102845967?text=Hello%20GSHOME%2C%20I%20would%20like%20to%20enquire%20about%20your%20cleaning%20services."
-            target="_blank"
-            rel="noreferrer"
-            className="mt-7 inline-flex items-center gap-3 rounded-full bg-moss px-6 py-4 text-sm font-bold text-white"
-          >
-            Share your enquiry <ArrowUpRight size={16} />
-          </a>
+          <div className="reveal flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div>
+              <Eyebrow>Reviews & testimonials</Eyebrow>
+              <h2 className="display max-w-3xl text-4xl font-semibold sm:text-6xl">
+                A fresh space.
+                <br />
+                <span className="text-moss">A better feeling.</span>
+              </h2>
+            </div>
+            <p className="max-w-md text-sm leading-7 text-muted">
+              Every space has a story. Explore moments of care, detail and fresh starts from the world of GSHOME.
+            </p>
+          </div>
+
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
+            {[
+              { image: "/testimonials/testimonial-1.JPEG", title: "A happier home", detail: "Residential cleaning" },
+              { image: "/testimonials/testimonial-2.JPEG", title: "Ready for business", detail: "Office & commercial cleaning" },
+              { image: "/testimonials/testimonial-3.JPEG", title: "Comfort, refreshed", detail: "Sofa & upholstery care" },
+              { image: "/testimonials/testimonial-4.JPEG", title: "Clear, calm water", detail: "Swimming pool maintenance" },
+              // { image: "/testimonials/testimonial-5.jpg", title: "A fresh beginning", detail: "Move-in & move-out cleaning" },
+              // { image: "/testimonials/testimonial-6.jpg", title: "Details that matter", detail: "Deep cleaning" },
+            ].map((item, index) => (
+              <article
+                key={item.image}
+                className={`reveal group relative min-h-[230px] overflow-hidden rounded-[1.4rem] bg-ink sm:min-h-[320px] ${index === 0 ? "lg:col-span-2" : ""}`}
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  onError={(event) => {
+                    event.currentTarget.style.display = "none";
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-4 text-white sm:p-6">
+                  <p className="text-[9px] font-bold uppercase tracking-[.18em] text-lime sm:text-[10px]">GSHOME care</p>
+                  <h3 className="display mt-2 text-xl font-semibold sm:text-2xl">{item.title}</h3>
+                  <p className="mt-1 text-xs text-white/75 sm:text-sm">{item.detail}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-col items-start justify-between gap-4 rounded-2xl border border-black/10 p-5 sm:flex-row sm:items-center sm:p-7">
+            <div>
+              <h3 className="display text-2xl font-semibold">Had a great experience with us?</h3>
+              <p className="mt-2 max-w-xl text-sm leading-6 text-muted">We’d love to hear your feedback. Message our team to share your experience or ask about a cleaning service.</p>
+            </div>
+            <a href="https://wa.me/2348102845967?text=Hello%20GSHOME%2C%20I%20would%20like%20to%20share%20feedback%20about%20your%20cleaning%20service." target="_blank" rel="noreferrer" className="inline-flex shrink-0 items-center gap-3 rounded-full bg-moss px-6 py-4 text-sm font-bold text-white transition hover:bg-ink">
+              Share feedback <ArrowUpRight size={16} />
+            </a>
+          </div>
         </div>
       </section>
       <section className="px-4 pb-20 sm:px-7 sm:pb-28">
@@ -709,11 +675,8 @@ function Home() {
                 figure out the right clean for it.
               </p>
             </div>
-
             <a
-              href="https://wa.me/2348102845967?text=Hello%20GSHOME%20Cleaning%20Service%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20cleaning%20services."
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               className="inline-flex items-center justify-between gap-8 rounded-full bg-ink px-6 py-4 text-sm font-bold text-white transition hover:bg-moss"
             >
               Request a Quote{" "}
@@ -736,9 +699,7 @@ function Home() {
               <span className="text-moss">from GSHOME.</span>
             </h2>
             <p className="mt-5 max-w-sm text-sm leading-7 text-muted">
-              Call or WhatsApp us to describe your property and required
-              service. You can also send an enquiry below and request a tailored
-              quote.
+              Call or WhatsApp us to describe your property and required service. You can also send an enquiry below and request a tailored quote.
             </p>
             <div className="mt-8 space-y-4">
               <a
@@ -751,9 +712,7 @@ function Home() {
                 0810 284 5967
               </a>
               <a
-                href="https://wa.me/2348102845967"
-                target="_blank"
-                rel="noreferrer"
+                href="https://wa.me/2348102845967" target="_blank" rel="noreferrer"
                 className="flex items-center gap-3 text-sm font-semibold"
               >
                 <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-moss">
@@ -765,8 +724,7 @@ function Home() {
                 <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-moss">
                   <MapPin size={17} />
                 </span>
-                House E50, Classic Street, Northstar Garden Estate, Lokogoma,
-                Abuja, FCT, Nigeria
+                House E50, Classic Street, Northstar Garden Estate, Lokogoma, Abuja, FCT, Nigeria
               </div>
             </div>
           </div>
@@ -799,15 +757,12 @@ function PageHero({
               {description}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="https://wa.me/2348102845967?text=Hello%20GSHOME%20Cleaning%20Service%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20cleaning%20services."
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-3 rounded-full bg-moss px-6 py-4 text-sm font-bold text-white hover:bg-ink"
               >
                 Request a Quote <ArrowUpRight size={16} />
-              </a>
-
+              </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center gap-2 rounded-full border border-black/10 px-6 py-4 text-sm font-bold"
@@ -1027,10 +982,7 @@ function AboutPage() {
               "Thoughtful",
               "We discuss your property, priorities and service needs before quoting.",
             ],
-            [
-              "Consistent",
-              "We agree on the scope and check the work against it.",
-            ],
+            ["Consistent", "We agree on the scope and check the work against it."],
             [
               "Respectful",
               "We respect your property and do not share photos without permission.",
@@ -1150,12 +1102,11 @@ function ContactPage() {
               Request a Quote from GSHOME
             </h2>
             <p className="mt-5 text-sm leading-7 text-muted">
-              Request a quote for your home, office, pool or specialised
-              cleaning needs.
+              Request a quote for your home, office, pool or specialised cleaning needs.
             </p>
             <div className="mt-8 space-y-4">
               <a
-                href="tel:+2348102845967"
+                href="tel:08102845967"
                 className="flex items-center gap-3 text-sm font-semibold"
               >
                 <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-moss">
@@ -1163,11 +1114,8 @@ function ContactPage() {
                 </span>
                 0810 284 5967
               </a>
-
               <a
-                href="https://wa.me/2348102845967?text=Hello%20GSHOME%20Cleaning%20Service%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://wa.me/2348102845967" target="_blank" rel="noreferrer"
                 className="flex items-center gap-3 text-sm font-semibold"
               >
                 <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-moss">
@@ -1175,13 +1123,11 @@ function ContactPage() {
                 </span>
                 WhatsApp: 0810 284 5967
               </a>
-
               <div className="flex items-center gap-3 text-sm font-semibold">
                 <span className="grid h-10 w-10 place-items-center rounded-full bg-[#edf2e9] text-moss">
                   <MapPin size={17} />
                 </span>
-                House E50, Classic Street, Northstar Garden Estate, Lokogoma,
-                Abuja, FCT, Nigeria
+                House E50, Classic Street, Northstar Garden Estate, Lokogoma, Abuja, FCT, Nigeria
               </div>
             </div>
           </div>
@@ -1250,9 +1196,7 @@ function ContactForm() {
           <h3 className="display text-2xl font-semibold">
             Tell us what you need.
           </h3>
-          <p className="mt-1 text-xs text-muted">
-            Tell us a little about your property.
-          </p>
+          <p className="mt-1 text-xs text-muted">Tell us a little about your property.</p>
         </div>
         <span className="grid h-11 w-11 place-items-center rounded-full bg-lime">
           <ArrowDownRight size={20} />
@@ -1356,15 +1300,8 @@ function Footer() {
         </div>
         <div className="flex flex-col justify-between gap-5 pt-6 text-xs text-white/50 sm:flex-row sm:items-center">
           <p>
-            © {new Date().getFullYear()}{" "}
-            <a
-              href="https://wa.me/2348140393937"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition hover:opacity-70"
-            >
-              Osh_la
-            </a>
+            © {new Date().getFullYear()} G.S Home Cleaning Services. Made with
+            care.
           </p>
           <div className="flex flex-wrap gap-5">
             <Link to="/services" className="hover:text-white">
