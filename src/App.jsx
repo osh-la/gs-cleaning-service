@@ -619,10 +619,10 @@ function Home() {
 
           <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
             {[
-              { image: "/testimonials/testimonial-1.JPEG", title: "A happier home", detail: "Residential cleaning" },
-              { image: "/testimonials/testimonial-2.JPEG", title: "Ready for business", detail: "Office & commercial cleaning" },
-              { image: "/testimonials/testimonial-3.JPEG", title: "Comfort, refreshed", detail: "Sofa & upholstery care" },
-              { image: "/testimonials/testimonial-4.JPEG", title: "Clear, calm water", detail: "Swimming pool maintenance" },
+              { image: "/testimonials/testimonial-1.jpeg", title: "A happier home", detail: "Residential cleaning" },
+              { image: "/testimonials/testimonial-2.jpeg", title: "Ready for business", detail: "Office & commercial cleaning" },
+              { image: "/testimonials/testimonial-3.jpeg", title: "Comfort, refreshed", detail: "Sofa & upholstery care" },
+              { image: "/testimonials/testimonial-4.jpeg", title: "Clear, calm ", detail: "Swimming pool maintenance" },
               // { image: "/testimonials/testimonial-5.jpg", title: "A fresh beginning", detail: "Move-in & move-out cleaning" },
               // { image: "/testimonials/testimonial-6.jpg", title: "Details that matter", detail: "Deep cleaning" },
             ].map((item, index) => (
@@ -634,7 +634,7 @@ function Home() {
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  className="absolute inset-0 h-full w-full object-contain transition duration-700 group-hover:scale-105"
                   onError={(event) => {
                     event.currentTarget.style.display = "none";
                   }}
