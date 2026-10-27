@@ -33,62 +33,69 @@ const services = [
   },
   {
     n: "02",
+    title: "Home organising & decluttering",
+    desc: "Create calmer, more functional rooms with help sorting, decluttering and organising wardrobes, kitchen cabinets, pantries, bedrooms, storage areas and everyday household essentials.",
+    img: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=85",
+    tag: "FOR A MORE ORGANISED HOME",
+  },
+  {
+    n: "03",
     title: "Office & commercial cleaning",
     desc: "Careful cleaning for offices, workspaces and business premises, including furniture, floors, restrooms and shared areas.",
     img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85",
     tag: "FOR YOUR BUSINESS",
   },
   {
-    n: "03",
+    n: "04",
     title: "Upholstery, sofa & carpet cleaning",
     desc: "Refresh sofas, chairs, rugs and carpets with suitable cleaning methods and equipment selected for the material.",
     img: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=85",
     tag: "FOR YOUR INTERIORS",
   },
   {
-    n: "04",
+    n: "05",
     title: "Swimming pool cleaning",
     desc: "Pool care can include removing debris, vacuuming floors, brushing walls and tiles, and cleaning pool edges.",
     img: "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1000&q=85",
     tag: "FOR YOUR POOL",
   },
   {
-    n: "05",
+    n: "06",
     title: "Fumigation & pest control",
     desc: "Fumigation for suitable properties, with treatment methods and re-entry guidance explained for the service arranged.",
     img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85",
     tag: "FOR PEACE OF MIND",
   },
   {
-    n: "06",
+    n: "07",
     title: "Post-construction cleaning",
     desc: "Remove construction dust and clean affected surfaces, cabinets, windows and floors before a property is put to use.",
     img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85",
     tag: "AFTER RENOVATION",
   },
   {
-    n: "07",
+    n: "08",
     title: "Move-in & move-out cleaning",
     desc: "A detailed property clean before new occupants move in or after previous occupants move out.",
     img: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85",
     tag: "FOR A FRESH START",
   },
   {
-    n: "08",
+    n: "09",
     title: "Kitchen & bathroom detailing",
     desc: "Focused attention for sinks, fittings, cabinets, appliances, showers, toilets and hard-to-reach surfaces.",
     img: "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1000&q=85",
     tag: "DETAIL-FOCUSED CARE",
   },
   {
-    n: "09",
+    n: "10",
     title: "Curtain, blind & window cleaning",
     desc: "Cleaning for curtains, blinds and windows based on the material and installation type. Motorised curtains are cleaned in place.",
     img: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1000&q=85",
     tag: "FOR THE FINISHING TOUCH",
   },
   {
-    n: "10",
+    n: "11",
     title: "Event & specialised cleaning",
     desc: "Cleaning support for event spaces and suitable industrial or specialised premises, subject to inspection and an agreed scope.",
     img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85",
@@ -339,7 +346,7 @@ function Home() {
             </div>
             <div className="rounded-2xl bg-white px-5 py-5">
               <p className="text-xs text-muted">We take on</p>
-              <p className="mt-1 font-bold">Routine & deep cleaning</p>
+              <p className="mt-1 font-bold">Cleaning & home organising</p>
             </div>
             <div className="flex items-center justify-between rounded-2xl bg-lime px-5 py-5">
               <div>
@@ -619,27 +626,27 @@ function Home() {
 
           <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
             {[
-              { image: "/testimonials/testimonial-1.jpeg", title: "A happier home", detail: "Residential cleaning" },
-              { image: "/testimonials/testimonial-2.jpeg", title: "Ready for business", detail: "Office & commercial cleaning" },
+              { image: "/testimonials/testimonial-2.jpeg", title: "Ready for business", detail: "Office, Residential & commercial cleaning" },
               { image: "/testimonials/testimonial-3.jpeg", title: "Comfort, refreshed", detail: "Sofa & upholstery care" },
               { image: "/testimonials/testimonial-4.jpeg", title: "Clear, calm ", detail: "Swimming pool maintenance" },
+              // { image: "/testimonials/testimonial-1.jpeg", title: "A happier home", detail: "Residential cleaning" },
               // { image: "/testimonials/testimonial-5.jpg", title: "A fresh beginning", detail: "Move-in & move-out cleaning" },
               // { image: "/testimonials/testimonial-6.jpg", title: "Details that matter", detail: "Deep cleaning" },
             ].map((item, index) => (
               <article
                 key={item.image}
-                className={`reveal group relative min-h-[230px] overflow-hidden rounded-[1.4rem] bg-ink sm:min-h-[320px] ${index === 0 ? "lg:col-span-2" : ""}`}
+                className={`reveal group relative min-h-[300px] overflow-hidden rounded-[1.4rem] bg-[#e8e8e2] sm:min-h-[420px] lg:min-h-[440px] ${index === 0 ? "lg:col-span-2 lg:min-h-[520px]" : ""}`}
               >
                 <img
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
-                  className="absolute inset-0 h-full w-full object-contain transition duration-700 group-hover:scale-105"
+                  className="absolute inset-0 h-full w-full object-cover object-center opacity-100 transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                   onError={(event) => {
                     event.currentTarget.style.display = "none";
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/0 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-4 text-white sm:p-6">
                   <p className="text-[9px] font-bold uppercase tracking-[.18em] text-lime sm:text-[10px]">GSHOME care</p>
                   <h3 className="display mt-2 text-xl font-semibold sm:text-2xl">{item.title}</h3>
@@ -805,7 +812,7 @@ function ServiceCard({ service }) {
           className="h-full w-full object-cover"
         />
         <span className="absolute left-4 top-4 rounded-full bg-paper/90 px-3 py-2 text-[9px] font-bold uppercase tracking-[.16em]">
-          {service.n} / 10
+          {service.n} / 11
         </span>
         <span className="absolute bottom-4 right-4 grid h-11 w-11 place-items-center rounded-full bg-lime text-ink transition group-hover:rotate-45">
           <ArrowUpRight size={19} />
@@ -833,7 +840,7 @@ function ServicesPage() {
         eyebrow="A service for every space"
         title="Professional cleaning for"
         accent="your space."
-        description="Explore residential, office, post-construction, upholstery, move-in/move-out, kitchen and bathroom, window, fumigation, event and swimming pool cleaning. Services are quoted according to your property and requirements."
+        description="Explore residential and deep cleaning, home organising and decluttering, office cleaning, upholstery care, move-in/move-out, post-construction, kitchen and bathroom detailing, window cleaning, fumigation, event and swimming pool services. Quotes are tailored to your property and requirements."
         image="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1500&q=85"
         number="02"
       />
@@ -1008,6 +1015,11 @@ function WorkPage() {
       "Home, cleaned with care.",
       "Residential & deep cleaning",
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85",
+    ],
+    [
+      "A place for everything.",
+      "Home organising & decluttering",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=85",
     ],
     [
       "Workspaces, refreshed.",
