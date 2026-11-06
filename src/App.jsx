@@ -295,26 +295,26 @@ function Home() {
                 The feeling of fresh
               </div>
               <div className="float-note absolute bottom-3 left-3 right-3 rounded-2xl border border-white/40 bg-paper/90 p-3 backdrop-blur-xl sm:bottom-7 sm:left-7 sm:right-auto sm:max-w-[330px] sm:rounded-[1.5rem] sm:p-6">
-  <div className="mb-2 flex items-center justify-between sm:mb-4">
-    <span className="grid h-8 w-8 place-items-center rounded-full bg-lime sm:h-10 sm:w-10">
-      <Sparkles size={16} className="sm:hidden" />
-      <Sparkles size={19} className="hidden sm:block" />
-    </span>
-    <span className="text-[8px] font-bold uppercase tracking-[.14em] text-muted sm:text-[10px] sm:tracking-[.18em]">
-      The GSHOME promise
-    </span>
-  </div>
+                <div className="mb-2 flex items-center justify-between sm:mb-4">
+                  <span className="grid h-8 w-8 place-items-center rounded-full bg-lime sm:h-10 sm:w-10">
+                    <Sparkles size={16} className="sm:hidden" />
+                    <Sparkles size={19} className="hidden sm:block" />
+                  </span>
+                  <span className="text-[8px] font-bold uppercase tracking-[.14em] text-muted sm:text-[10px] sm:tracking-[.18em]">
+                    The GSHOME promise
+                  </span>
+                </div>
 
-  <p className="display text-lg font-semibold leading-tight sm:text-2xl">
-    Your space deserves
-    <br />
-    the G.S Home touch.
-  </p>
+                <p className="display text-lg font-semibold leading-tight sm:text-2xl">
+                  Your space deserves
+                  <br />
+                  the G.S Home touch.
+                </p>
 
-  <p className="mt-1 text-xs leading-5 text-muted sm:mt-2 sm:text-sm sm:leading-6">
-    Detailed work, clear communication and care for every space.
-  </p>
-</div>
+                <p className="mt-1 text-xs leading-5 text-muted sm:mt-2 sm:text-sm sm:leading-6">
+                  Detailed work, clear communication and care for every space.
+                </p>
+              </div>
               <div className="absolute bottom-8 right-7 hidden text-right text-white sm:block">
                 <p className="display text-5xl font-semibold"></p>
                 <p className="mt-1 text-[10px] uppercase tracking-[.2em]">
