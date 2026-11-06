@@ -25,77 +25,77 @@ gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
-    n: "01",
+   
     title: "Residential & deep cleaning",
     desc: "Detailed cleaning for apartments, houses and private residences, including kitchens, bathrooms, bedrooms, living rooms and other areas.",
     img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85",
     tag: "FOR YOUR HOME",
   },
   {
-    n: "02",
+  
     title: "Home organising & decluttering",
     desc: "Create calmer, more functional rooms with help sorting, decluttering and organising wardrobes, kitchen cabinets, pantries, bedrooms, storage areas and everyday household essentials.",
     img: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=85",
     tag: "FOR A MORE ORGANISED HOME",
   },
   {
-    n: "03",
+  
     title: "Office & commercial cleaning",
     desc: "Careful cleaning for offices, workspaces and business premises, including furniture, floors, restrooms and shared areas.",
     img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85",
     tag: "FOR YOUR BUSINESS",
   },
   {
-    n: "04",
+  
     title: "Upholstery, sofa & carpet cleaning",
     desc: "Refresh sofas, chairs, rugs and carpets with suitable cleaning methods and equipment selected for the material.",
     img: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=85",
     tag: "FOR YOUR INTERIORS",
   },
   {
-    n: "05",
+   
     title: "Swimming pool cleaning",
     desc: "Pool care can include removing debris, vacuuming floors, brushing walls and tiles, and cleaning pool edges.",
     img: "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1000&q=85",
     tag: "FOR YOUR POOL",
   },
   {
-    n: "06",
+    
     title: "Fumigation & pest control",
     desc: "Fumigation for suitable properties, with treatment methods and re-entry guidance explained for the service arranged.",
     img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85",
     tag: "FOR PEACE OF MIND",
   },
   {
-    n: "07",
+   
     title: "Post-construction cleaning",
     desc: "Remove construction dust and clean affected surfaces, cabinets, windows and floors before a property is put to use.",
     img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85",
     tag: "AFTER RENOVATION",
   },
   {
-    n: "08",
+   
     title: "Move-in & move-out cleaning",
     desc: "A detailed property clean before new occupants move in or after previous occupants move out.",
     img: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85",
     tag: "FOR A FRESH START",
   },
   {
-    n: "09",
+    
     title: "Kitchen & bathroom detailing",
     desc: "Focused attention for sinks, fittings, cabinets, appliances, showers, toilets and hard-to-reach surfaces.",
     img: "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1000&q=85",
     tag: "DETAIL-FOCUSED CARE",
   },
   {
-    n: "10",
+    
     title: "Curtain, blind & window cleaning",
     desc: "Cleaning for curtains, blinds and windows based on the material and installation type. Motorised curtains are cleaned in place.",
     img: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1000&q=85",
     tag: "FOR THE FINISHING TOUCH",
   },
   {
-    n: "11",
+   
     title: "Event & specialised cleaning",
     desc: "Cleaning support for event spaces and suitable industrial or specialised premises, subject to inspection and an agreed scope.",
     img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85",
@@ -296,11 +296,11 @@ function Home() {
               </div>
             </div>
             <div className="hero-image relative min-h-[480px] overflow-hidden rounded-[2rem] bg-[#dfe4d8] sm:min-h-[620px] lg:min-h-[700px]">
-              <img
-                className="absolute inset-0 h-full w-full object-cover"
-                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=90"
-                alt="Sunlit, beautifully maintained living room"
-              />
+             <img
+  className="absolute inset-0 w-full h-full object-cover object-center"
+  src="/gs.jpeg"
+  alt="Sunlit, beautifully maintained living room"
+/>
               <div className="absolute inset-0 bg-gradient-to-t from-[#10251b]/55 via-transparent to-black/5" />
               <div className="absolute left-5 top-5 rounded-full border border-white/40 bg-white/20 px-4 py-2 text-[10px] font-bold uppercase tracking-[.18em] text-white backdrop-blur-md sm:left-7 sm:top-7">
                 The feeling of fresh
@@ -325,7 +325,7 @@ function Home() {
               </div>
               <div className="absolute bottom-8 right-7 hidden text-right text-white sm:block">
                 <p className="display text-5xl font-semibold">
-                  01<span className="text-lime">.</span>
+             
                 </p>
                 <p className="mt-1 text-[10px] uppercase tracking-[.2em]">
                   Clean space, clear mind
@@ -489,7 +489,7 @@ function Home() {
               href="#contact"
               className="mt-7 inline-flex items-center gap-3 rounded-full bg-lime px-6 py-4 text-sm font-bold text-ink transition hover:bg-white"
             >
-              Let’s plan your clean <ArrowUpRight size={16} />
+              Let’s plan your cleaning <ArrowUpRight size={16} />
             </a>
           </div>
         </div>
@@ -623,27 +623,27 @@ function Home() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {[
               [
-                "01",
+               
                 "Make an enquiry",
                 "Call or WhatsApp us and describe your property, location and required cleaning service.",
               ],
               [
-                "02",
+                
                 "Property assessment",
                 "We may arrange an inspection or an initial video assessment. A ₦10,000 inspection fee may apply where confirmed in advance.",
               ],
               [
-                "03",
+                
                 "Receive a quotation",
                 "Your quote is based on the property, its condition, the requested service and the agreed scope.",
               ],
               [
-                "04",
+               
                 "Confirm your booking",
                 "The stated arrangement is a 30% deposit, with the balance payable on completion. Confirm these terms with GSHOME before paying.",
               ],
               [
-                "05",
+                
                 "Cleaning & quality checks",
                 "Our team completes the agreed work and checks the relevant areas against the service scope.",
               ],
@@ -903,9 +903,7 @@ function ServiceCard({ service }) {
           loading="lazy"
           className="h-full w-full object-cover"
         />
-        <span className="absolute left-4 top-4 rounded-full bg-paper/90 px-3 py-2 text-[9px] font-bold uppercase tracking-[.16em]">
-          {service.n} / 11
-        </span>
+  
         <span className="absolute bottom-4 right-4 grid h-11 w-11 place-items-center rounded-full bg-lime text-ink transition group-hover:rotate-45">
           <ArrowUpRight size={19} />
         </span>
@@ -934,7 +932,7 @@ function ServicesPage() {
         accent="your space."
         description="Explore residential and deep cleaning, home organising and decluttering, office cleaning, upholstery care, move-in/move-out, post-construction, kitchen and bathroom detailing, window cleaning, fumigation, event and swimming pool services. Quotes are tailored to your property and requirements."
         image="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1500&q=85"
-        number="02"
+        number=""
       />
       <section className="px-4 py-10 sm:px-7 sm:py-16">
         <div className="mx-auto max-w-[1440px]">
@@ -1045,7 +1043,7 @@ function AboutPage() {
         accent="changes how life feels."
         description="G.S Home Cleaning Services helps homes, workplaces and shared spaces feel fresher, calmer and ready for what matters next. We bring thoughtful service and attention to the small things."
         image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1500&q=85"
-        number="03"
+        number=""
       />
       <section className="px-4 py-12 sm:px-7 sm:py-20">
         <div className="mx-auto grid max-w-[1200px] gap-10 md:grid-cols-2">
@@ -1145,7 +1143,7 @@ function WorkPage() {
         accent="in the details."
         description="See examples of the kinds of spaces GSHOME can care for. Authentic client project images and videos should be added only with the customer’s approval."
         image={projects[0][2]}
-        number="04"
+        number=""
       />
       <section className="px-4 py-10 sm:px-7 sm:py-16">
         <div className="mx-auto max-w-[1440px]">
@@ -1199,7 +1197,7 @@ function ContactPage() {
         accent="needs a fresh start."
         description="Tell us about the property, location and cleaning service you need. We’ll discuss the scope, arrange an assessment where necessary and prepare a tailored quotation."
         image="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1500&q=85"
-        number="05"
+        number=""
       />
       <section className="px-4 pb-12 sm:px-7 sm:pb-20">
         <div className="mx-auto grid max-w-[1440px] gap-8 rounded-[2rem] bg-white p-6 shadow-soft sm:p-10 lg:grid-cols-[.75fr_1.25fr] lg:p-14">
