@@ -273,20 +273,20 @@ function Home() {
                 </a>
               </div>
               <div className="mt-12 flex items-center gap-4 border-t border-black/10 pt-5">
-                <div className="flex -space-x-2">
+                {/* <div className="flex -space-x-2">
                   <img
                     className="h-9 w-9 rounded-full border-2 border-paper object-cover"
-                    src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=100&q=80"
+                    src="https://unsplash.com/photos/a-woman-with-braids-standing-in-a-room-Q1QRTSeZIxI"
                   />
                   <img
                     className="h-9 w-9 rounded-full border-2 border-paper object-cover"
-                    src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=100&q=80"
+                    src="https://unsplash.com/photos/man-in-red-crew-neck-t-shirt-wearing-brown-fedora-hat-vQCn_21n4t8"
                   />
                   <img
                     className="h-9 w-9 rounded-full border-2 border-paper object-cover"
-                    src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=100&q=80"
+                    src="https://unsplash.com/photos/man-in-green-zip-up-jacket-and-black-cap-standing-beside-brown-wall-5n2QlRcB6Cs"
                   />
-                </div>
+                </div> */}
                 <div>
                   <div className="flex gap-1 text-[#7d9b3c]">★★★★★</div>
                   <p className="text-xs text-muted">
