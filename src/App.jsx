@@ -301,18 +301,20 @@ function Home() {
                     <Sparkles size={19} className="hidden sm:block" />
                   </span>
                   <span className="text-[8px] font-bold uppercase tracking-[.14em] text-muted sm:text-[10px] sm:tracking-[.18em]">
-                    The GSHOME promise
+                    The GSHOME family
                   </span>
                 </div>
 
                 <p className="display text-lg font-semibold leading-tight sm:text-2xl">
-                  Your space deserves
+                  One team.
                   <br />
-                  the G.S Home touch.
+                  One big happy family.
                 </p>
 
                 <p className="mt-1 text-xs leading-5 text-muted sm:mt-2 sm:text-sm sm:leading-6">
-                  Detailed work, clear communication and care for every space.
+                  From the CEO to every team member, we work hand in hand,
+                  sharing the same passion, supporting one another and bringing
+                  genuine care to every space we serve.
                 </p>
               </div>
               <div className="absolute bottom-8 right-7 hidden text-right text-white sm:block">
@@ -1027,7 +1029,7 @@ function AboutPage() {
         title="We believe clean"
         accent="changes how life feels."
         description="G.S Home Cleaning Services helps homes, workplaces and shared spaces feel fresher, calmer and ready for what matters next. We bring thoughtful service and attention to the small things."
-        image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1500&q=85"
+        image="/gs.jpeg"
         number=""
       />
       <section className="px-4 py-12 sm:px-7 sm:py-20">
