@@ -91,6 +91,9 @@ const services = [
     tag: "TAILORED TO YOUR SPACE",
   },
 ];
+function openQuoteModal() {
+  window.dispatchEvent(new Event("gshome:open-quote"));
+}
 function Header() {
   const [open, setOpen] = useState(false);
   const loc = useLocation();
@@ -129,12 +132,13 @@ function Header() {
             </Link>
           ))}
         </nav>
-        <Link
-          to="/contact"
+        <button
+          type="button"
+          onClick={openQuoteModal}
           className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
         >
           Request a Quote <ArrowUpRight size={15} />
-        </Link>
+        </button>
         <button
           onClick={() => setOpen(!open)}
           className="grid h-10 w-10 place-items-center rounded-full bg-white lg:hidden"
@@ -154,12 +158,13 @@ function Header() {
               {label}
             </Link>
           ))}
-          <Link
-            className="rounded-xl bg-moss px-4 py-3 font-semibold text-white"
-            to="/contact"
+          <button
+            type="button"
+            onClick={openQuoteModal}
+            className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
           >
-            Request a Quote
-          </Link>
+            Request a Quote <ArrowUpRight size={15} />
+          </button>
         </nav>
       )}
     </header>
@@ -245,15 +250,13 @@ function Home() {
                 take care of the details, so you can get back to what matters.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
-                <a
-                  href="#contact"
-                  className="group inline-flex items-center gap-4 rounded-full bg-moss px-6 py-4 text-sm font-bold text-white transition hover:bg-ink"
+                <button
+                  type="button"
+                  onClick={openQuoteModal}
+                  className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
                 >
-                  Request a Quote{" "}
-                  <span className="grid h-7 w-7 place-items-center rounded-full bg-lime text-ink transition group-hover:rotate-45">
-                    <ArrowUpRight size={16} />
-                  </span>
-                </a>
+                  Request a Quote <ArrowUpRight size={15} />
+                </button>
                 <a
                   href="#services"
                   className="inline-flex items-center gap-2 px-4 py-4 text-sm font-bold"
@@ -551,12 +554,13 @@ function Home() {
                 </p>
               </div>
             </div>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-3 self-start rounded-full bg-ink px-6 py-4 text-sm font-bold text-white sm:self-auto"
+            <button
+              type="button"
+              onClick={openQuoteModal}
+              className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
             >
-              Request a Cleaning Quote <ArrowUpRight size={16} />
-            </a>
+              Request a Quote <ArrowUpRight size={15} />
+            </button>
           </div>
         </div>
       </section>
@@ -756,15 +760,13 @@ function Home() {
                 figure out the right clean for it.
               </p>
             </div>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-between gap-8 rounded-full bg-ink px-6 py-4 text-sm font-bold text-white transition hover:bg-moss"
+            <button
+              type="button"
+              onClick={openQuoteModal}
+              className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
             >
-              Request a Quote{" "}
-              <span className="grid h-8 w-8 place-items-center rounded-full bg-lime text-ink">
-                <ArrowUpRight size={17} />
-              </span>
-            </a>
+              Request a Quote <ArrowUpRight size={15} />
+            </button>
           </div>
         </div>
       </section>
@@ -843,12 +845,13 @@ function PageHero({
               {description}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-3 rounded-full bg-moss px-6 py-4 text-sm font-bold text-white hover:bg-ink"
+              <button
+                type="button"
+                onClick={openQuoteModal}
+                className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
               >
-                Request a Quote <ArrowUpRight size={16} />
-              </Link>
+                Request a Quote <ArrowUpRight size={15} />
+              </button>
               <Link
                 to="/services"
                 className="inline-flex items-center gap-2 rounded-full border border-black/10 px-6 py-4 text-sm font-bold"
@@ -1248,15 +1251,13 @@ function Callout() {
               clean for it.
             </p>
           </div>
-          <Link
-            to="/contact"
-            className="inline-flex items-center justify-between gap-8 rounded-full bg-ink px-6 py-4 text-sm font-bold text-white"
+          <button
+            type="button"
+            onClick={openQuoteModal}
+            className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
           >
-            Request a Quote{" "}
-            <span className="grid h-8 w-8 place-items-center rounded-full bg-lime text-ink">
-              <ArrowUpRight size={17} />
-            </span>
-          </Link>
+            Request a Quote <ArrowUpRight size={15} />
+          </button>
         </div>
       </div>
     </section>
@@ -1367,6 +1368,184 @@ function ContactForm() {
     </form>
   );
 }
+
+function QuoteModal({ onClose }) {
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    service: "Residential & deep cleaning",
+    property: "Residential",
+    location: "",
+    details: "",
+  });
+
+  const change = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
+  const submit = (e) => {
+    e.preventDefault();
+
+    const message = `Hello G.S Home Cleaning Services, I'd like to request a quotation.
+
+Name: ${form.name}
+Phone: ${form.phone}
+Service: ${form.service}
+Property type: ${form.property}
+Location: ${form.location}
+Details: ${form.details || "Not specified"}`;
+
+    window.open(
+      `https://wa.me/2348102845967?text=${encodeURIComponent(message)}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
+  };
+
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === "Escape") onClose();
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "";
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/70 px-3 py-4 backdrop-blur-sm sm:px-6"
+      onMouseDown={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+    >
+      <div className="relative max-h-[92vh] w-full max-w-2xl overflow-y-auto rounded-[1.8rem] bg-paper p-5 shadow-2xl sm:p-9">
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close quote form"
+          className="absolute right-5 top-5 grid h-10 w-10 place-items-center rounded-full bg-white text-ink hover:bg-lime"
+        >
+          <X size={20} />
+        </button>
+
+        <div className="mb-7 pr-10">
+          <p className="mb-3 text-[10px] font-bold uppercase tracking-[.2em] text-moss">
+            G.S Home Cleaning Services
+          </p>
+
+          <h2 className="display text-3xl font-semibold sm:text-5xl">
+            Tell us what you need.
+          </h2>
+
+          <p className="mt-3 text-sm leading-6 text-muted">
+            Give us a few details about your space and the service you need.
+            We'll get back to you with the next steps.
+          </p>
+        </div>
+
+        <form onSubmit={submit} className="grid gap-4 sm:grid-cols-2">
+          <label className="text-xs font-bold">
+            Full name
+            <input
+              required
+              name="name"
+              value={form.name}
+              onChange={change}
+              placeholder="Your full name"
+              className="mt-2 w-full rounded-xl border border-black/10 bg-white px-4 py-3.5 text-sm font-normal outline-none focus:border-moss"
+            />
+          </label>
+
+          <label className="text-xs font-bold">
+            Phone number
+            <input
+              required
+              type="tel"
+              name="phone"
+              value={form.phone}
+              onChange={change}
+              placeholder="080..."
+              className="mt-2 w-full rounded-xl border border-black/10 bg-white px-4 py-3.5 text-sm font-normal outline-none focus:border-moss"
+            />
+          </label>
+
+          <label className="text-xs font-bold sm:col-span-2">
+            What service do you need?
+            <select
+              name="service"
+              value={form.service}
+              onChange={change}
+              className="mt-2 w-full rounded-xl border border-black/10 bg-white px-4 py-3.5 text-sm font-normal outline-none focus:border-moss"
+            >
+              {services.map((s) => (
+                <option key={s.title} value={s.title}>
+                  {s.title}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className="text-xs font-bold">
+            Property type
+            <select
+              name="property"
+              value={form.property}
+              onChange={change}
+              className="mt-2 w-full rounded-xl border border-black/10 bg-white px-4 py-3.5 text-sm font-normal outline-none focus:border-moss"
+            >
+              <option>Residential</option>
+              <option>Office / Commercial</option>
+              <option>Swimming Pool</option>
+              <option>Event Space</option>
+              <option>Industrial / Specialised</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label className="text-xs font-bold">
+            Property location
+            <input
+              required
+              name="location"
+              value={form.location}
+              onChange={change}
+              placeholder="e.g. Lokogoma, Abuja"
+              className="mt-2 w-full rounded-xl border border-black/10 bg-white px-4 py-3.5 text-sm font-normal outline-none focus:border-moss"
+            />
+          </label>
+
+          <label className="text-xs font-bold sm:col-span-2">
+            Tell us more about what you need
+            <textarea
+              name="details"
+              value={form.details}
+              onChange={change}
+              rows={4}
+              placeholder="Property size, number of rooms, condition, preferred date or any special requirements..."
+              className="mt-2 w-full resize-y rounded-xl border border-black/10 bg-white px-4 py-3.5 text-sm font-normal outline-none focus:border-moss"
+            />
+          </label>
+
+          <button
+            type="submit"
+            className="mt-2 flex w-full items-center justify-between rounded-full bg-moss px-6 py-4 text-sm font-bold text-white transition hover:bg-ink sm:col-span-2"
+          >
+            Continue to WhatsApp
+            <ArrowUpRight size={18} />
+          </button>
+
+          <p className="text-center text-[10px] leading-5 text-muted sm:col-span-2">
+            Your enquiry will open in WhatsApp for you to review and send.
+          </p>
+        </form>
+      </div>
+    </div>
+  );
+}
+
 function Footer() {
   return (
     <footer className="px-4 pb-5 pt-8 sm:px-7">
@@ -1389,12 +1568,14 @@ function Footer() {
             Your space deserves the G.S Home touch.{" "}
             <span className="text-lime">better things.</span>
           </p>
-          <Link
-            to="/contact"
+          <a
+            href="https://wa.me/2348102845967"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 self-start rounded-full bg-white/10 px-5 py-3 text-xs font-bold hover:bg-white/20"
           >
             Book a Cleaning <ArrowUpRight size={15} />
-          </Link>
+          </a>
         </div>
         <div className="flex flex-col justify-between gap-5 pt-6 text-xs text-white/50 sm:flex-row sm:items-center">
           <p>
@@ -1487,11 +1668,25 @@ function ScrollToTop() {
   }, [pathname]);
   return null;
 }
+
 export default function App() {
+  const [quoteOpen, setQuoteOpen] = useState(false);
+
+  useEffect(() => {
+    const open = () => setQuoteOpen(true);
+
+    window.addEventListener("gshome:open-quote", open);
+
+    return () => {
+      window.removeEventListener("gshome:open-quote", open);
+    };
+  }, []);
+
   return (
     <>
       <ScrollToTop />
       <Header />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<ServicesPage />} />
@@ -1501,7 +1696,10 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
       <Footer />
+
+      {quoteOpen && <QuoteModal onClose={() => setQuoteOpen(false)} />}
     </>
   );
 }
