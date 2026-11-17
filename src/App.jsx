@@ -27,7 +27,7 @@ const services = [
   {
     title: "Residential & deep cleaning",
     desc: "Detailed cleaning for apartments, houses and private residences, including kitchens, bathrooms, bedrooms, living rooms and other areas.",
-    img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85",
+    img: "/images/deepcleaning.jpeg",
     tag: "FOR YOUR HOME",
   },
   {
@@ -45,7 +45,7 @@ const services = [
   {
     title: "Upholstery, sofa & carpet cleaning",
     desc: "Refresh sofas, chairs, rugs and carpets with suitable cleaning methods and equipment selected for the material.",
-    img: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=85",
+    img: "images/deepcleaning2.jpeg",
     tag: "FOR YOUR INTERIORS",
   },
   {
@@ -57,13 +57,13 @@ const services = [
   {
     title: "Fumigation & pest control",
     desc: "Fumigation for suitable properties, with treatment methods and re-entry guidance explained for the service arranged.",
-    img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85",
+    img: "images/fumigation.jpeg",
     tag: "FOR PEACE OF MIND",
   },
   {
     title: "Post-construction cleaning",
     desc: "Remove construction dust and clean affected surfaces, cabinets, windows and floors before a property is put to use.",
-    img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85",
+    img: "/images/post-construction.jpeg",
     tag: "AFTER RENOVATION",
   },
   {
@@ -87,7 +87,7 @@ const services = [
   {
     title: "Event & specialised cleaning",
     desc: "Cleaning support for event spaces and suitable industrial or specialised premises, subject to inspection and an agreed scope.",
-    img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85",
+    img: "/images/eventcleaning.png",
     tag: "TAILORED TO YOUR SPACE",
   },
 ];
