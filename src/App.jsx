@@ -138,7 +138,7 @@ function Header() {
         <button
           type="button"
           onClick={openQuoteModal}
-          className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
+          className="items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss flex"
         >
           Request a Quote <ArrowUpRight size={15} />
         </button>
@@ -164,7 +164,7 @@ function Header() {
           <button
             type="button"
             onClick={openQuoteModal}
-            className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
+            className="items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss flex"
           >
             Request a Quote <ArrowUpRight size={15} />
           </button>
@@ -256,7 +256,7 @@ function Home() {
                 <button
                   type="button"
                   onClick={openQuoteModal}
-                  className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
+                  className=" items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss flex"
                 >
                   Request a Quote <ArrowUpRight size={15} />
                 </button>
@@ -560,7 +560,7 @@ function Home() {
             <button
               type="button"
               onClick={openQuoteModal}
-              className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
+              className=" items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss flex"
             >
               Request a Quote <ArrowUpRight size={15} />
             </button>
@@ -766,7 +766,7 @@ function Home() {
             <button
               type="button"
               onClick={openQuoteModal}
-              className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
+              className=" items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss flex"
             >
               Request a Quote <ArrowUpRight size={15} />
             </button>
@@ -851,7 +851,7 @@ function PageHero({
               <button
                 type="button"
                 onClick={openQuoteModal}
-                className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
+                className=" items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss flex"
               >
                 Request a Quote <ArrowUpRight size={15} />
               </button>
@@ -1257,7 +1257,7 @@ function Callout() {
           <button
             type="button"
             onClick={openQuoteModal}
-            className="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss md:flex"
+            className=" items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss flex"
           >
             Request a Quote <ArrowUpRight size={15} />
           </button>
