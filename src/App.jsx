@@ -1609,7 +1609,7 @@ function Footer() {
           <div className="flex gap-3">
             <a
               aria-label="Instagram"
-              href="https://instagram.com"
+              href="https://www.instagram.com/g.s.home_cleaning_service_?psln=MWhzZGZ2d3g3a2p3dQ%3D%3D&utm_source=qr"
               className="grid h-9 w-9 place-items-center rounded-full bg-white/10 hover:bg-white/20"
             >
               <Instagram size={15} />
