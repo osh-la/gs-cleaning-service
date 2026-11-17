@@ -766,7 +766,7 @@ function Home() {
             <button
               type="button"
               onClick={openQuoteModal}
-              className=" items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white transition hover:bg-moss flex"
+              className=" items-center gap-2 rounded-full bg-ink px-5 py-3 text-xs font-bold text-white text-center transition hover:bg-moss flex"
             >
               Request a Quote <ArrowUpRight size={15} />
             </button>
