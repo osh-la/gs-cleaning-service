@@ -18,7 +18,10 @@ import {
   MapPin,
   Instagram,
   Facebook,
+
 } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -1615,11 +1618,11 @@ function Footer() {
               <Instagram size={15} />
             </a>
             <a
-              aria-label="Facebook"
-              href="https://facebook.com"
+              aria-label="tiktok"
+              href="https://www.tiktok.com/@g.s_home_cleaning_servic?_r=1&_t=ZS-9BUA5ZfDSho"
               className="grid h-9 w-9 place-items-center rounded-full bg-white/10 hover:bg-white/20"
             >
-              <Facebook size={15} />
+            <FontAwesomeIcon icon={faTiktok} />
             </a>
           </div>
         </div>
